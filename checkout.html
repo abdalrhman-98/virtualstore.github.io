@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Checkout</title>
+        <link rel="icon" href="img/MLOGO.png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+        <link rel="stylesheet" href="style.css">
+
+        <style>
+            #check {
+                margin-top: 100px;
+                padding: 25px;
+                background-color: #fafafa;
+                border-top: 8px solid coral;
+                border-bottom: 8px solid coral;
+                border-radius: 25px;
+            }
+            #check .s-btn {
+                margin-left: auto;
+                display: block;
+                margin-right: auto;
+            }
+            .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            }
+            .p-title {
+                font-weight: 600;
+                color: #6d6d6d;
+                font-size: 1.1rem;
+            }
+            @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <!-- *....Navbar.....* -->
+    <nav class="navbar navbar-expand-lg navbar-light py-3 fixed-top">
+        <div class="container">
+            <a href="index.html"><img class="img-fluid" src="img/MLOGO2.png" alt=""></a>
+            <a class="navbar-brand" href="index.html"><span>Virtual</span> Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span><i id="bar" class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fal fa-search"></i>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html"><i class="fal fa-shopping-bag"></i><span class="badge"> </span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="container py-5 shadow" id="check">
+        <div class="row">
+        <div class="col-md-4 order-md-2 mb-4">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Cart products</span>
+            <span class="badge badge-secondary badge-pill">0</span>
+            </h4>
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Total payment</span>
+            <span class="badge badge-secondary total-pay">0</span>
+            </h4>
+            <ul class="list-group mb-3 cart-info">
+            </ul>
+            <ul class="list-group mb-3 emp-cart">
+            </ul>
+            
+
+        </div>
+        <div class="col-md-8 order-md-1">
+            <h4 class="mb-3">Billing address</h4>
+            <form>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                <label for="firstName">First name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                    Valid first name is required.
+                </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                <label for="lastName">Last name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                    Valid last name is required.
+                </div>
+                </div>
+            </div>
+    
+            <div class="mb-3">
+                <label for="username">Username</label>
+                <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">@</span>
+                </div>
+                <input type="text" class="form-control" id="username" placeholder="Username" required>
+                <div class="invalid-feedback" style="width: 100%;">
+                    Your username is required.
+                </div>
+                </div>
+            </div>
+    
+            <div class="mb-3">
+                <label for="email">Email <span class="text-muted">(Optional)</span></label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+                </div>
+            </div>
+    
+            <div class="mb-3">
+                <label for="address">Address</label>
+                <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+                <div class="invalid-feedback">
+                Please enter your shipping address.
+                </div>
+            </div>
+    
+            <div class="mb-3">
+                <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
+                <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+            </div>
+    
+            <div class="row">
+                <div class="col-md-5 mb-3">
+                <label for="country">Country</label>
+                <select class="custom-select d-block w-100" id="country" required>
+                    <option value="">Choose...</option>
+                    <option>Syria</option>
+                    <option>UAE</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please select a valid country.
+                </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                <label for="state">State</label>
+                <select class="custom-select d-block w-100" id="state" required>
+                    <option value="">Choose...</option>
+                    <option>Damascus</option>
+                    <option>Dubai</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please provide a valid state.
+                </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                <label for="zip">Zip</label>
+                <input type="text" class="form-control" id="zip" placeholder="" required>
+                <div class="invalid-feedback">
+                    Zip code required.
+                </div>
+                </div>
+            </div>
+
+    
+            <h4 class="mb-3">Payment</h4>
+            <div class="col-lg-3 col-md-6 col-12 mx-0">
+                <img src="img/payment.png" alt="">
+            </div>
+    
+            <div class="d-block my-3">
+                <div class="custom-control custom-radio">
+                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                <label class="custom-control-label" for="credit">Credit card</label>
+                </div>
+                <div class="custom-control custom-radio">
+                <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                <label class="custom-control-label" for="debit">Debit card</label>
+                </div>
+                <div class="custom-control custom-radio">
+                <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+                <label class="custom-control-label" for="paypal">PayPal</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                <label for="cc-name">Name on card</label>
+                <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                <small class="text-muted">Full name as displayed on card</small>
+                <div class="invalid-feedback">
+                    Name on card is required
+                </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                <label for="cc-number">Credit card number</label>
+                <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                <div class="invalid-feedback">
+                    Credit card number is required
+                </div>
+                </div>
+            </div>
+            <button class="c-btn mt-3" type="submit">Continue to checkout</button>
+            </form>
+        </div>
+        </div>
+    </section>
+
+    <footer class="mt-5 py-5">
+        <div class="row container mx-auto pt-5">
+            <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+                <a href="index.html"><img class="img-fluid" src="img/MLOGO2.png" alt=""></a>
+                <a class="brand" href="index.html"><span>Virtual</span> Store</a>
+                <p class="pt-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic sed soluta maxime quibusdam omnis minima .</p>
+            </div>
+            <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+                <h5 class="pb-2">Featured</h5>
+                <ul class="text-uppercase list-unstyled">
+                    <li><a href="#">men</a></li>
+                    <li><a href="#">women</a></li>
+                    <li><a href="#">boys</a></li>
+                    <li><a href="#">girls</a></li>
+                    <li><a href="#">new arrivals</a></li>
+                    <li><a href="#">shoes</a></li>
+                    <li><a href="#">clothes</a></li>
+                </ul>
+            </div>
+            <div class="footer-one col-lg-3 col-md-6 col-12 ">
+                <h5 class="pb-2">Contact Us</h5>
+                <div>
+                    <h6 class="text-uppercase">Address</h6>
+                    <p>123 Alhamraa, Damas, SY</p>
+                </div>
+                <div>
+                    <h6 class="text-uppercase">Phone</h6>
+                    <p> (+963) 942342342</p>
+                </div>
+                <div>
+                    <h6 class="text-uppercase">Email</h6>
+                    <p>Virtual@Store.com</p>
+                </div>
+            </div>
+            <div class="footer-one col-lg-3 col-md-6 col-12">
+                <h5 class="pb-2">Instagram</h5>
+                <div class="row">
+                    <img class="img-fluid w-25 h-100 m-2" src="img/insta/1.jpg" alt="">
+                    <img class="img-fluid w-25 h-100 m-2" src="img/insta/2.jpg" alt="">
+                    <img class="img-fluid w-25 h-100 m-2" src="img/insta/3.jpg" alt="">
+                    <img class="img-fluid w-25 h-100 m-2" src="img/insta/4.jpg" alt="">
+                    <img class="img-fluid w-25 h-100 m-2" src="img/insta/5.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="copyright mt-5">
+            <div class="row container mx-auto mb-4">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <img src="img/payment.png" alt="">
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <p>Virtual Store eCommerce © 2024. All Rights Reserved</p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 text-nowrap mb-2">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+            integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+            integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+            crossorigin="anonymous"></script>
+        <script src="./js/data.js"></script>
+        <script src="./js/script.js"></script>
+        <script>
+            if (JSON.parse(localStorage.getItem('productsInCart')).length === 0)
+              {ftotal=0;}else{ftotal=localStorage.getItem('tot')}
+            let badgePill = document.querySelector(".badge-pill")
+            let totalPay = document.querySelector(".total-pay")
+            let cartInfo = document.querySelector(".cart-info")
+            let empCart = document.querySelector(".emp-cart")
+            function drawCartProducts(allProducts){
+                if (JSON.parse(localStorage.getItem('productsInCart')).length === 0) {
+                    empCart.innerHTML = `<li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <span class="my-0 ml-3 p-title">no products in your cart</span>
+                            </div>
+                        </li>`
+                }
+                let products = JSON.parse(localStorage.getItem('productsInCart')) || allProducts;
+                let numOfProducts = products.length
+                badgePill.innerHTML = numOfProducts
+                totalPay.innerHTML="$"+ftotal;
+                let productUI = products.map((item) => {
+                    return(
+                    `<li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <img src=${item.imgUrl} alt="" width ='30px' >
+                            <span class="my-0 ml-3 p-title">${item.title}</span>
+                        </div>
+                       
+                    </li>`)
+                }).join("");
+                cartInfo.innerHTML = productUI;
+            }
+            drawCartProducts();
+        </script>
+    </body>
+
+</html>
